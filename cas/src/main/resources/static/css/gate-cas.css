@@ -1,0 +1,20 @@
+@import url("cas.css");
+
+body {
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+//line-height: 1.4em;
+    background-color: #ffffff;
+}
+
+#logo {
+    display: block;
+    background: url(../images/gojek-logo.png) no-repeat center;
+    text-indent: -999em;
+    float: none;
+    height: 100px;
+    width: 100%;
+    margin-right: 40px;
+    border: 0px;
+
+}
