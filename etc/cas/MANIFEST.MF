@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: cas-server-webapp
+Implementation-Version: 5.0.5
+Start-Class: org.apereo.cas.web.CasWebApplication
+Spring-Boot-Classes: WEB-INF/classes/
+Spring-Boot-Lib: WEB-INF/lib/
+Implementation-Date: 2017-04-21T11:23:12.738-07:00[America/Phoenix]
+Spring-Boot-Version: 1.4.2.RELEASE
+Created-By: org.apereo.cas
+Implementation-Vendor: org.apereo.cas
+Main-Class: org.springframework.boot.loader.WarLauncher
+
