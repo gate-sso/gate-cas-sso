@@ -2,7 +2,7 @@
   "@class" : "org.apereo.cas.services.RegexRegisteredService",
   "serviceId" : "^https://.*",
   "name" : "HTTPS",
-  "id" : 10000001,
+  "id" : 10000102,
   "description" : "This service definition authorizes all application urls that support HTTPS protocol.",
   "evaluationOrder" : 10001
 }

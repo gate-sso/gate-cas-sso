@@ -1,0 +1,9 @@
+{
+  "@class": "org.apereo.cas.support.oauth.services.OAuthRegisteredService",
+  "clientId": "localhost-localdomain",
+  "clientSecret": "localhost-development-mode",
+  "bypassApprovalPrompt": false,
+  "serviceId": "^(https|http)://localhost*",
+  "name": "HTTPS and HTTP",
+  "id": 10000200
+}
