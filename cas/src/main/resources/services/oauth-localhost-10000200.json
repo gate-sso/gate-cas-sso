@@ -3,7 +3,7 @@
   "clientId": "localhost-localdomain",
   "clientSecret": "localhost-development-mode",
   "bypassApprovalPrompt": false,
-  "serviceId": "^(https|http)://localhost*",
-  "name": "HTTPS and HTTP",
+  "serviceId": "^(https|http|imps)://localhost:18000.*",
+  "name": "HTTPS, IMPS and HTTP",
   "id": 10000200
 }
