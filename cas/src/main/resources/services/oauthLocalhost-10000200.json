@@ -4,6 +4,6 @@
   "clientSecret": "localhost-development-mode",
   "bypassApprovalPrompt": false,
   "serviceId": "^(https|http)://localhost*",
-  "name": "oauth-localhost",
+  "name": "oauthLocalhost",
   "id": 10000200
 }
