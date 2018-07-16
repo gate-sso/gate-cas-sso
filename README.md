@@ -7,6 +7,9 @@ In addition to that
 - we add cas-gate plugin 
 - add a custom login page
 
+# Requirements
+You need to have JDK installed. Minimum version is v1.8
+
 ## Development Setup
 
 If you have problem with permission denied while execute commands below, try to run it with `sudo`
