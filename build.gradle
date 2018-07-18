@@ -1,13 +1,9 @@
-import org.jose4j.jwk.JsonWebKey
-import org.jose4j.jwk.OctJwkGenerator
-
 buildscript {
     repositories {
         mavenLocal()
         jcenter()
     }
     dependencies {
-        classpath "org.bitbucket.b_c:jose4j:0.5.2"
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${project.'springboot.version'}"
     }
 }
@@ -21,15 +17,8 @@ task wrapper(type: Wrapper, description: "Update the Gradle wrapper") {
     gradleVersion = project."gradle.version"
 }
 
-task generateKeys {
-  group = 'CAS'
-  description = 'generate keys for CAS. These keys can be added to your cas.properties file'
-  doLast {
-    println 'Generating keys for CAS...'
-    ['cas.tgc.encryptionKey': 256, 'cas.tgc.signingKey': 512, 'cas.webflow.encryption.key': 96, 'cas.webflow.signing.key': 512].each { key, size ->
-        def octetKey = OctJwkGenerator.generateJwk(size)
-        def params = octetKey.toParams(JsonWebKey.OutputControlLevel.INCLUDE_SYMMETRIC)
-        println "${key}=${params.get('k')}"
+task casVersion() {
+    doFirst {
+        println "${project.'cas.version'}"
     }
-  }
 }

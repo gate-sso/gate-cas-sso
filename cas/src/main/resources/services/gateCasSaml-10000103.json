@@ -2,7 +2,7 @@
 {
   "@class" : "org.apereo.cas.support.saml.services.SamlRegisteredService",
   "serviceId" : "^(https?|http?)://.*",
-  "name" : "gate-cas-saml",
+  "name" : "gateCasSaml",
   "id" : 10000103,
   "evaluationOrder" : 10,
   "description" : "This service definition creates SAML configuration."
