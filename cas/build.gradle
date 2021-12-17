@@ -1,5 +1,14 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.scaldingspoon.gradle:gradle-waroverlay-plugin:0.9.3"
+    }
+}
+apply plugin: 'waroverlay'
+
 apply plugin: 'org.springframework.boot'
-apply from: 'http://dl.bintray.com/scalding/generic/waroverlay.gradle'
 apply from: 'https://raw.githubusercontent.com/apereo/cas/5.2.x/gradle/overrides.gradle'
 
 bootRepackage {
@@ -22,11 +31,17 @@ repositories {
 }
 
 dependencies {
+
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.16.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.16.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-jcl', version: '2.16.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.16.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-web', version: '2.16.0'
+
     compile "org.apereo.cas:cas-server-support-oauth-webflow:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-saml-idp:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-rest-authentication:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-webapp:${project.'cas.version'}@war"
-
 }
 
 task copyConfig(type: Copy) {
